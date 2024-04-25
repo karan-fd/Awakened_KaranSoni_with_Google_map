@@ -1,0 +1,16 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '🏗️👷 Styling, testing and building your project before committing'
+
+# Run lint-staged to check linting, formatting, and TypeScript
+npx lint-staged --config lint-staged.config.json
+
+# Check if lint-staged failed
+if [ $? -ne 0 ]; then
+    echo '🚫🚫🚫 lint-staged check failed. 🚫🚫🚫'
+    exit 1
+fi
+
+# If everything passes... Now we can commit
+echo '🤔🤔🤔🤔... Alright! Code looks good to me... ✅✅✅✅ You win this time ... I am committing this now. ✅✅✅✅ 🤔🤔🤔🤔'
