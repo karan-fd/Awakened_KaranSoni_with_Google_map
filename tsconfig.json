@@ -21,11 +21,14 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@scss/*": ["./src/assets/sass/*"],
+      "@components/*": ["./src/components/*"],
+      "@shared/*": ["./shared/*"],
+      "@models/*": ["./models/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/auth/[...nextauth]/route.js"],
   "exclude": ["node_modules"]
 }
