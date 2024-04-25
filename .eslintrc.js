@@ -38,6 +38,7 @@ module.exports = {
         objectLiteralTypeAssertions: 'never',
       },
     ],
+    '@typescript-eslint/no-unused-vars': 'off',
     // React rules
     'react/jsx-fragments': ['warn', 'syntax'],
     'react/jsx-filename-extension': ['warn', { extensions: ['ts', 'tsx'] }],
@@ -45,7 +46,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
-    'prettier/prettier': 'warn',
+    'prettier/prettier': 'off',
   },
   settings: {
     react: {

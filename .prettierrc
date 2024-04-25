@@ -2,9 +2,9 @@
   "arrowParens": "avoid",
   "singleQuote": true,
   "bracketSpacing": true,
-  "endOfLine": "lf",
   "semi": true,
   "tabWidth": 2,
   "trailingComma": "es5",
-  "printWidth": 120
+  "printWidth": 120,
+  "plugins": ["prettier-plugin-tailwindcss"]
 }
