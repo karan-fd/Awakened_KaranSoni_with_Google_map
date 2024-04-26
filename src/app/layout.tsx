@@ -5,6 +5,7 @@ import '@scss/style.scss';
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import Provider from './Provider';
+import '@splidejs/react-splide/css';
 
 const raleway = Raleway({ subsets: ['latin'] });
 

@@ -1,6 +1,6 @@
 'use client';
+import { CategoryList, GoogleMapView, Range, Rating, Resturanats } from '@/modules/resturant/partials';
 import React from 'react';
-import { CategoryList, GoogleMapView, Range, Rating } from './partials';
 
 export const ResturantPage: React.FC = () => {
   return (
@@ -12,8 +12,9 @@ export const ResturantPage: React.FC = () => {
             <Range />
             <Rating />
           </aside>
-          <section className="sticky top-10 xs:col-span-3">
+          <section className="sticky top-10 grid gap-10 xs:col-span-3">
             <GoogleMapView />
+            <Resturanats />
           </section>
         </div>
       </div>

@@ -1,10 +1,12 @@
 'use client';
+import { PlaceConext } from '@/context/place-context';
 import { UserLocationContext } from '@/context/user-location-context';
 import { GoogleMap, LoadScript, MarkerF } from '@react-google-maps/api';
-import React, { useContext } from 'react';
+import React, { Fragment, useContext } from 'react';
 
 export const GoogleMapView: React.FC = () => {
   const { location } = useContext(UserLocationContext);
+  const { resturants } = useContext(PlaceConext);
 
   const mapContainerStyle = {
     width: '100%',
@@ -36,6 +38,26 @@ export const GoogleMapView: React.FC = () => {
                 },
               }}
             />
+            {/* {resturants &&
+              resturants.map(
+                (item: any, idx: number) =>
+                  idx <= 7 && (
+                    <Fragment key={idx}>
+                      <MarkerF
+                        position={item.geometry.location}
+                        icon={{
+                          url: '/icon-resturant-marker.svg',
+                          // eslint-disable-next-line
+                          // @ts-expect-error
+                          scaledSize: {
+                            width: 12,
+                            height: 12,
+                          },
+                        }}
+                      />
+                    </Fragment>
+                  )
+              )} */}
           </GoogleMap>
         </LoadScript>
       </div>

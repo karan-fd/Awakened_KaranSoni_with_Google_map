@@ -1,7 +1,6 @@
-import { ResturantPage } from '@/modules/resturants';
+import { ResturantPage } from '@/modules/resturant';
 import { PlaceWrapper } from '@/wrapper/place-wrapper';
-import getPlace from '@shared/GlobalApi';
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const Resturant: React.FC = () => {
   return (

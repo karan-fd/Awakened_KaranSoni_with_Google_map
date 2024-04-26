@@ -1,6 +1,8 @@
+'use client';
 import { createContext } from 'react';
 
 interface IPlaceContext {
+  isLoading: boolean;
   category: string;
   radius: number;
   resturants: any;

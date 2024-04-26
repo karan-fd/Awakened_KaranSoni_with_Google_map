@@ -23,12 +23,13 @@ export const PlaceWrapper: React.FC<Props> = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const getResturant = () => {
+    dispatch({ type: 'SET_LOADING' });
     getPlace(state.category, state.radius, location.lat, location.lng).then(res => {
-      //   console.log('res', res.data);
       dispatch({
         type: 'GET_RESTURANTS',
         isLoading: true,
-        resturants: res.data.resturant.results,
+        // resturants: res.data.resturant.results,
+        resturants: res.data.products,
       });
     });
   };
@@ -40,6 +41,7 @@ export const PlaceWrapper: React.FC<Props> = ({ children }) => {
   const handleCategory = (val: string) => {
     dispatch({
       type: 'GET_CATEGORY',
+      isLoading: true,
       category: val,
     });
   };
@@ -47,6 +49,7 @@ export const PlaceWrapper: React.FC<Props> = ({ children }) => {
   const handleRadius = debounce((val: number) => {
     dispatch({
       type: 'GET_RADIUS',
+      isLoading: true,
       radius: val,
     });
   }, 1000);
