@@ -28,5 +28,10 @@ export const reducer = (state: any, action: any) => {
         ...state,
         curr: action.curr,
       };
+    case 'GET_DISTANCE':
+      return {
+        ...state,
+        dis: action.dis,
+      };
   }
 };

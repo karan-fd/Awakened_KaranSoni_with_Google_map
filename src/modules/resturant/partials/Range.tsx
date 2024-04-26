@@ -3,7 +3,7 @@ import { PlaceConext } from '@/context/place-context';
 import React, { useContext, useState } from 'react';
 
 export const Range: React.FC = () => {
-  const [radius, setRadius] = useState<number>(1000);
+  const [radius, setRadius] = useState<number>(0);
   const { handleRadius } = useContext(PlaceConext);
   return (
     <div>

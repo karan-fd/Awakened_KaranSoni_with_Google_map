@@ -18,6 +18,7 @@ export const PlaceWrapper: React.FC<Props> = ({ children }) => {
     resturants: [],
     category: '',
     radius: 1000,
+    distance: 0,
     currentResturant: {},
   };
 
@@ -62,8 +63,15 @@ export const PlaceWrapper: React.FC<Props> = ({ children }) => {
     });
   };
 
+  const updateDistance = (val: number | string) => {
+    dispatch({
+      type: 'GET_DISTANCE',
+      dis: val,
+    });
+  };
+
   return (
-    <PlaceConext.Provider value={{ ...state, handleCategory, handleRadius, handleCurrentResturant }}>
+    <PlaceConext.Provider value={{ ...state, handleCategory, handleRadius, handleCurrentResturant, updateDistance }}>
       {children}
     </PlaceConext.Provider>
   );

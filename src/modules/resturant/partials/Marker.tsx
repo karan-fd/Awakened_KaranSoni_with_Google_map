@@ -27,7 +27,7 @@ export const Marker: React.FC<Props> = ({ item }) => {
     >
       {currentResturant?.reference === item?.reference ? (
         <OverlayView position={item?.geometry?.location} mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}>
-          <ResturantItem theme="white" item={item} />
+          <ResturantItem theme="white" item={item} direction={true} />
         </OverlayView>
       ) : null}
     </MarkerF>

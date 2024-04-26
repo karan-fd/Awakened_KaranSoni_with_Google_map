@@ -5,7 +5,7 @@ import Image from 'next/image';
 import React, { useContext, useState } from 'react';
 
 export const CategoryList: React.FC = () => {
-  const [selectedCate, setSelectedCate] = useState<string | number>(0);
+  const [selectedCate, setSelectedCate] = useState<string | number>();
   const { handleCategory } = useContext(PlaceConext);
   return (
     <div>
