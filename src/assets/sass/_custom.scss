@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+.select-rating-style {
+  @apply hidden;
+  & ~ label {
+    @apply mb-1 inline-block rounded-md border-2 border-solid border-orange-50 bg-orange-50 p-2 grayscale;
+  }
+  &:checked ~ label {
+    @apply border-orange-100 grayscale-0;
+  }
+}
