@@ -1,6 +1,6 @@
 'use client';
 import { RatingList } from '@shared/resturant-data';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 export const Rating: React.FC = () => {
   const [selectedRating, setSelectedRating] = useState<number[]>([]);

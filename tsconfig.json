@@ -26,9 +26,18 @@
       "@scss/*": ["./src/assets/sass/*"],
       "@components/*": ["./src/components/*"],
       "@shared/*": ["./shared/*"],
-      "@models/*": ["./models/*"]
+      "@models/*": ["./src/models/*"],
+      "@context/*": ["./src/context/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/auth/[...nextauth]/route.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/api/auth/[...nextauth]/route.js",
+    "shared/GlobalApi.js",
+    "src/app/resturants/partials/GoogleMapView.js"
+  ],
   "exclude": ["node_modules"]
 }

@@ -1,9 +1,10 @@
+import { UserLocationWrapper } from '@/wrapper/user-location-wrapper';
+import { Footer } from '@components/Footer';
 import { Header } from '@components/Header';
 import '@scss/style.scss';
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import Provider from './Provider';
-import { Footer } from '@components/Footer';
 
 const raleway = Raleway({ subsets: ['latin'] });
 
@@ -21,9 +22,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={raleway.className}>
         <Provider>
-          <Header />
-          {children}
-          <Footer />
+          <UserLocationWrapper>
+            <Header />
+            {children}
+            <Footer />
+          </UserLocationWrapper>
         </Provider>
       </body>
     </html>
