@@ -7,7 +7,7 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
-    domains: ['localhost'],
+    domains: ['localhost', 'https://cdn.dummyjson.com/', 'https://maps.googleapis.com'],
   },
   env: {},
   async headers() {

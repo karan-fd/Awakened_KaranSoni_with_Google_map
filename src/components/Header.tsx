@@ -1,9 +1,9 @@
 'use client';
-import React, { Fragment, useEffect } from 'react';
-import Image from 'next/image';
-import { signIn, signOut, useSession } from 'next-auth/react';
 import { Menu } from '@headlessui/react';
+import { signIn, signOut, useSession } from 'next-auth/react';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import React, { useEffect } from 'react';
 
 export const Header: React.FC = () => {
   const { data: session } = useSession();
