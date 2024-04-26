@@ -39,6 +39,7 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     // React rules
     'react/jsx-fragments': ['warn', 'syntax'],
     'react/jsx-filename-extension': ['warn', { extensions: ['ts', 'tsx'] }],

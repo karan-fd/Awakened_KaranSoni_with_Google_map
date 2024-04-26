@@ -37,7 +37,7 @@
     ".next/types/**/*.ts",
     "src/app/api/auth/[...nextauth]/route.js",
     "shared/GlobalApi.js",
-    "src/app/resturants/partials/GoogleMapView.js"
+    "src/modules/resturants/partials/GoogleMapView.js"
   ],
   "exclude": ["node_modules"]
 }
