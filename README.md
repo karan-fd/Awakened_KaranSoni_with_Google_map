@@ -2,8 +2,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-Pleas Find ENV from .env.example
-
 Keys need to be updated before using, please follow the following steps:
 
 1. Visit Google Console Cloud [https://console.cloud.google.com]
@@ -12,6 +10,14 @@ Keys need to be updated before using, please follow the following steps:
 4. Following that you will receive MAP_API_KEY.
 5. Now add your website url and redirect URL '[domain]/api/auth/callback/google'
 6. Update all received, i.e. Client ID, Client Secret and GOGGLE_MAP_API_KEY with your obtained key.
+
+Below is .env example
+
+GOOGLE_CLIENT_ID= obtainer client id here
+GOOGLE_CLIENT_SECRET= obtained client secret here
+
+GOOGLE_MAP_API_KEYS= obtained map api key here
+NEXT_PUBLI_GOOGLE_MAP_API_KEYS= obtained map api key here
 
 Great now follow these below steps.
 
