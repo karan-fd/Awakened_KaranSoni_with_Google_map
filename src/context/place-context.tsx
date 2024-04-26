@@ -6,8 +6,10 @@ interface IPlaceContext {
   category: string;
   radius: number;
   resturants: any;
+  currentResturant: any;
   handleCategory: (val: string) => void;
   handleRadius: (val: number) => void;
+  handleCurrentResturant: (item: any) => void;
 }
 
 const initailValue = {} as IPlaceContext;

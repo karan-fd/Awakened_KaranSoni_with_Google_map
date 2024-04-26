@@ -18,6 +18,7 @@ export const PlaceWrapper: React.FC<Props> = ({ children }) => {
     resturants: [],
     category: '',
     radius: 1000,
+    currentResturant: {},
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -54,5 +55,16 @@ export const PlaceWrapper: React.FC<Props> = ({ children }) => {
     });
   }, 1000);
 
-  return <PlaceConext.Provider value={{ ...state, handleCategory, handleRadius }}>{children}</PlaceConext.Provider>;
+  const handleCurrentResturant = (curr: any) => {
+    dispatch({
+      type: 'GET_CURRENT_RESTURANT',
+      curr: curr,
+    });
+  };
+
+  return (
+    <PlaceConext.Provider value={{ ...state, handleCategory, handleRadius, handleCurrentResturant }}>
+      {children}
+    </PlaceConext.Provider>
+  );
 };

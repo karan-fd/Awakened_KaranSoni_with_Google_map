@@ -23,5 +23,10 @@ export const reducer = (state: any, action: any) => {
         isLoading: false,
         radius: action.radius,
       };
+    case 'GET_CURRENT_RESTURANT':
+      return {
+        ...state,
+        curr: action.curr,
+      };
   }
 };
