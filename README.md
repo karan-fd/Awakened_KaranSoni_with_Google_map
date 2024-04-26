@@ -2,6 +2,21 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Pleas Find ENV from .env.example
+
+Keys need to be updated before using, please follow the following steps:
+
+1. Visit Google Console Cloud [https://console.cloud.google.com]
+2. Create ClientID and Client Secret, i.e. by creating a project and then creating new credentials under OAuth Client IDs
+3. Enable Places API and Google Map Platform
+4. Following that you will receive MAP_API_KEY.
+5. Now add your website url and redirect URL '[domain]/api/auth/callback/google'
+6. Update all received, i.e. Client ID, Client Secret and GOGGLE_MAP_API_KEY with your obtained key.
+
+Great now follow these below steps.
+
+For any queries find me at [https://linkedin.com/in/karan243] or mail me at 'sonik1486@gmail.com'
+
 First, run the development server:
 
 ```bash
